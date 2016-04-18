@@ -61,7 +61,7 @@ $('#SimpleTable').SimpleTable(options);
 2.7 对齐状态：为 .simpletable 类添加 .text-* 即可不同的对齐状态（*可以为left/center/right）。<br>
 2.8 响应式表格：为表格外层添加一个div，并附上 .table-responsive 类，可以达到响应式的效果（依赖bootstrap）。<br>
 示例：<br>
-![](https://github.com/huangjunse/simpletable/raw/master/Snapshot/01_nojs.jpg)<br>
+![](https://github.com/huangjunse/simpletable/raw/master/snapshot/01_nojs.jpg)<br>
 Code: <br>
 >```html
 <table class="simpletable tab-primary">
@@ -150,6 +150,6 @@ Code: <br>
 对齐状态：'left'/'center'/'right'<br>
 
 一些示例截图：（更多示例请看demo）<br>
-![](https://github.com/huangjunse/simpletable/raw/master/Snapshot/02_color.jpg)<br>
-![](https://github.com/huangjunse/simpletable/raw/master/Snapshot/03_padding.jpg)<br>
+![](https://github.com/huangjunse/simpletable/raw/master/snapshot/02_color.jpg)<br>
+![](https://github.com/huangjunse/simpletable/raw/master/snapshot/03_padding.jpg)<br>
 <br>
