@@ -152,3 +152,4 @@ Code: <br>
 一些示例截图：（更多示例请看demo）<br>
 ![](https://github.com/huangjunse/simpletable/raw/master/Snapshot/02_color.jpg)<br>
 ![](https://github.com/huangjunse/simpletable/raw/master/Snapshot/03_padding.jpg)<br>
+<br>
