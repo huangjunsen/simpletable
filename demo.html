@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Table</title>
+    <link rel="stylesheet" href="dist/simpletable.css">
+    <style>
+    /*此处仅为该demo的显示样式，与 SimpleTable 无关紧要********start********/
+    body{color:rgb(19,155,173);font-family:"Microsoft YaHei","Lato","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;}
+    .contaner{padding:20px;}
+    .text-center{text-align:center;}
+    small{font-size:75%;color:gray;}
+    .row{width:100%;}
+    [class^="col"] {padding:0 0.5% 1% 0.5%;float:left;}
+    .col3{width:24%;}
+    .col4{width:32%;}
+    .col6{width:49%;}
+    .col12{width:99%;}
+    .clr{clear:both;}
+    pre {display:block;padding:9.5px;margin:0 0 10px;font-size:13px;line-height:1.42857143;color:#333;word-break:break-all;word-wrap:break-word;background-color:#e3e3e3;border:1px solid #ccc;border-radius:4px;font-family: Menlo,Monaco,Consolas,"Courier New",monospace;}
+    pre code{padding:2px 4px;font-size:90%;color:#c7254e;border-radius:4px;text-shadow:0 0 10px rgba(0,0,0,0.3);}
+    ul{list-style:none;}
+    .table-responsive{overflow-x: auto;}
+    .btn{border-radius:3px;-webkit-box-shadow:none;box-shadow:none;border:1px solid transparent;background-color:#3c8dbc;border-color:#367fa9;color:#fff;padding:6px 12px;cursor:pointer;}
+    .text-red{color:#F00 !important;}
+    /*此处仅为该demo的显示样式，与 SimpleTable 无关紧要********end********/
+    </style>
+</head>
+<body>
+    <div class="contaner">
+        <h1 class='text-center'>SimpleTable <small>V1.0</small></h1>
+        <h2 class='text-center'><small>一个基于 Jquery 的 Html5 简易表格样式插件</small></h2>
+        <h2 class='text-center'><small>Sam 2016.Apr</small></h2>
+        <h3>1. 主题</h3>
+        <div class="row">
+            <div class="col4">
+                <table id="SimpleTable1">
+                    <thead>
+                        <tr><th>default样式</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>普通行</td></tr>
+                        <tr class="tr-active"><td>鼠标经过/激活行</td></tr>
+                        <tr class="tr-disable"><td>禁用行</td></tr>
+                        <tr class="tr-disable tr-active"><td>禁用且激活行</td></tr>
+                    </tbody>
+                    <tfoot>
+                        <tr><th>表格脚部（可无）</th></tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="col4">
+                <table id="SimpleTable2">
+                    <thead>
+                        <tr><th>primary样式</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>普通行</td></tr>
+                        <tr class="tr-active"><td>鼠标经过/激活行</td></tr>
+                        <tr class="tr-disable"><td>禁用行</td></tr>
+                        <tr class="tr-disable tr-active"><td>禁用且激活行</td></tr>
+                    </tbody>
+                    <tfoot>
+                        <tr><th>表格脚部（可无）</th></tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="col4">
+                <table id="SimpleTable3">
+                    <thead>
+                        <tr><th>success样式</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>普通行</td></tr>
+                        <tr class="tr-active"><td>鼠标经过/激活行</td></tr>
+                        <tr class="tr-disable"><td>禁用行</td></tr>
+                        <tr class="tr-disable tr-active"><td>禁用且激活行</td></tr>
+                    </tbody>
+                    <tfoot>
+                        <tr><th>表格脚部（可无）</th></tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col4">
+                <table id="SimpleTable4">
+                    <thead>
+                        <tr><th>info样式</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>普通行</td></tr>
+                        <tr class="tr-active"><td>鼠标经过/激活行</td></tr>
+                        <tr class="tr-disable"><td>禁用行</td></tr>
+                        <tr class="tr-disable tr-active"><td>禁用且激活行</td></tr>
+                    </tbody>
+                    <tfoot>
+                        <tr><th>表格脚部（可无）</th></tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="col4">
+                <table id="SimpleTable5">
+                    <thead>
+                        <tr><th>warning样式</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>普通行</td></tr>
+                        <tr class="tr-active"><td>鼠标经过/激活行</td></tr>
+                        <tr class="tr-disable"><td>禁用行</td></tr>
+                        <tr class="tr-disable tr-active"><td>禁用且激活行</td></tr>
+                    </tbody>
+                    <tfoot>
+                        <tr><th>表格脚部（可无）</th></tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="col4">
+                <table id="SimpleTable6">
+                    <thead>
+                        <tr><th>danger样式</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>普通行</td></tr>
+                        <tr class="tr-active"><td>鼠标经过/激活行</td></tr>
+                        <tr class="tr-disable"><td>禁用行</td></tr>
+                        <tr class="tr-disable tr-active"><td>禁用且激活行</td></tr>
+                    </tbody>
+                    <tfoot>
+                        <tr><th>表格脚部（可无）</th></tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        <br />
+        <h3>2. 使用方法：</h3>
+        <ul>
+            <li>2.1. 添加CSS及JS文件<br />
+            <pre><code>&lt;link href="static/plugins/simpletable/simpletable.min.css" rel="stylesheet" type="text/css" /&gt;<br />&lt;script src="static/plugins/simpletable/simpletable.min.js" type="text/javascript"&gt;&lt;/script&gt;</code></pre></li>
+            <li>2.2. 书写 Table Dom<br />
+            <pre><code>&lt;table id="SimpleTable"&gt;<br />&nbsp;&nbsp;&lt;thead&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&lt;th&gt;...&lt;/th&gt;&lt;/tr&gt;<br />&nbsp;&nbsp;&lt;/thead&gt;<br />&nbsp;&nbsp;&lt;tbody&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&lt;td&gt;...&lt;/td&gt;&lt;/tr&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&lt;td&gt;...&lt;/td&gt;&lt;/tr&gt;<br />&nbsp;&nbsp;&lt;/tbody&gt;<br />&nbsp;&nbsp;&lt;tfoot&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;&lt;th&gt;...&lt;/th&gt;&lt;/tr&gt;<br />&nbsp;&nbsp;&lt;/tfoot&gt;<br />&lt;/table&gt;</code></pre></li>
+            <li>2.3. 采用js方式生成：<br />
+            <pre><code>$('#SimpleTable').SimpleTable(<span class="text-red">options</span>);</code></pre></li>
+        </ul>
+        <br />
+        <h3>3. 非js方式生成：</h3>
+        <ul>
+            <li>3.1 朴素 SimpleTable ： 为 table 添加 .simpletable 类即可。</li>
+            <li>3.2 激活状态： 为 tr 添加 .tr-active 类即可产生改行的激活状态。</li>
+            <li>3.3 禁用状态： 为 tr 添加 .tr-disable 类即可产生改行的禁用状态。</li>
+            <li>3.4 6种主题： 为 .simpletable 类添加 .tab-* 即可产生5种色彩主题（*可以为primary/success/info/warning/danger）。</li>
+            <li>3.5 无边框样式：为 .simpletable 类添加 .noborder 类可以产生无边框的表格效果。</li>
+            <li>3.6 极其简单的Dom： table 中可以仅仅含有 tr th td 等元素而不必含有 thead tbody tfoot 等元素（尽管推荐使用这些标签）。</li>
+            <li>3.7 对齐状态：为 .simpletable 类添加 .text-* 即可不同的对齐状态（*可以为left/center/right）。</li>
+            <li>3.8 响应式表格：为表格外层添加一个div，并附上 .table-responsive 类，可以达到响应式的效果（依赖bootstrap）。</li>
+        </ul>
+        <div class="table-responsive">
+            <table class="simpletable tab-primary text-center">
+            <tr class=""><th>表头1</th><th>表头2</th><th>表头3</th></tr>
+            <tr><td>这是</td><td>一行</td><td>普通行</td></tr>
+            <tr class="tr-disable"><td>这是</td><td>一行</td><td>禁用状态的行</td></tr>
+            <tr class="tr-active"><td>这是</td><td>一行</td><td>激活状态的行</td></tr>
+            </table>
+        </div>
+        <div>
+            <button type="button" class="btn" name="ToggleNext">显示/隐藏</button>
+            <pre style="display:None"><code>&lt;table class="simpletable tab-primary"&gt;<br />&nbsp;&nbsp;&lt;tr class=""&gt;&lt;th&gt;表头1&lt;/th&gt;&lt;th&gt;表头2&lt;/th&gt;&lt;th&gt;表头3&lt;/th&gt;&lt;/tr&gt;<br />&nbsp;&nbsp;&lt;tr&gt;&lt;td&gt;这是&lt;/td&gt;&lt;td&gt;一行&lt;/td&gt;&lt;td&gt;普通行&lt;/td&gt;&lt;/tr&gt;<br />&nbsp;&nbsp;&lt;tr class="tr-disable"&gt;&lt;td&gt;这是&lt;/td&gt;&lt;td&gt;一行&lt;/td&gt;&lt;td&gt;禁用状态的行&lt;/td&gt;&lt;/tr&gt;<br />&nbsp;&nbsp;&lt;tr class="tr-active"&gt;&lt;td&gt;这是&lt;/td&gt;&lt;td&gt;一行&lt;/td&gt;&lt;td&gt;激活状态的行&lt;/td&gt;&lt;/tr&gt;<br />&lt;/table&gt;</code></pre>
+        </div>
+        <br />
+        <h3>4. 参数(options)：</h3>
+        <div class="table-responsive">
+            <table id="SimpleTable7">
+                <thead>
+                    <tr><th>参数</th><th>默认值</th><th>描述</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>hover</td><td>false</td><td>是否产生鼠标经过效果：false/true</td></tr>
+                    <tr><td>padding</td><td>false</td><td>是否产生紧缩的表格样式：false/'no'/'tiny'/'tight'</td></tr>
+                    <tr><td>border</td><td>true</td><td>是否有边框：true/false</td></tr>
+                    <tr><td>color</td><td>''</td><td>颜色主题：''/'primary'/'success'/'info'/'warning'/'danger'</td></tr>
+                    <tr><td>algin</td><td>'center'</td><td>对齐状态：'left'/'center'/'right'</td></tr>
+                </tbody>
+                <tfoot>
+                    <tr><th>参数</th><th>默认值</th><th>描述</th></tr>
+                </tfoot>
+            </table>
+            <div>
+                <button type="button" class="btn" name="ToggleNext">显示/隐藏</button>
+                <pre style="display:None"><code>$('#SimpleTable7').SimpleTable({<br />&nbsp;&nbsp;&nbsp;&nbsp;hover: false,<br />&nbsp;&nbsp;&nbsp;&nbsp;padding: false,<br />&nbsp;&nbsp;&nbsp;&nbsp;border: true,<br />&nbsp;&nbsp;&nbsp;&nbsp;color: '',<br />&nbsp;&nbsp;&nbsp;&nbsp;algin: 'center'<br />});</code></pre>
+            </div>
+        </div>
+        <br />
+        <h3>5. js方法：</h3>
+        <p>
+            采用纯粹 Html 方式虽然能展现出效果不错的表格，但是一些需要js支持的功能却无法使用，这是一种遗憾。<br />
+            因此在插件中添加几个较为有用的方法，提供使用：
+        </p>
+        <div class="table-responsive">
+            <table id="SimpleTable8">
+                <thead>
+                    <tr><th>方法</th><th>示例</th><th>描述</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>addHover</td>
+                        <td><pre><code>.SimpleTable('addHover');</code></pre></td>
+                        <td>为表格添加鼠标经过样式</td>
+                    </tr>
+                    <tr>
+                        <td>addColumn</td>
+                        <td><pre><code>.SimpleTable('addColumn',options);</code></pre></td>
+                        <td>
+                        批量为表添加列，参数options介绍（以下为默认值）：<br />
+                        <pre><code>{<br />&nbsp;&nbsp;colCount:1,    //需要添加的列数<br />&nbsp;&nbsp;contents: [],  //嵌套数组，用于存放需要添加的内容<br />&nbsp;&nbsp;hasID: false,  //是否需要为每个单元格添加id属性<br />&nbsp;&nbsp;headIDPrefix: 'H', //th的id前缀<br />&nbsp;&nbsp;lineIDPrefix: 'L', //td的id前缀<br />&nbsp;&nbsp;startID: 0     //id的起始序号<br />}</code></pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>rowspan</td>
+                        <td><pre><code>.SimpleTable('rowspan','all');</code><code>.SimpleTable('rowspan',0);</code></pre></td>
+                        <td>合并内容相同的单元格为跨行单元格：'all'/行号(起始为0)</td>
+                    </tr>
+                    <tr>
+                        <td>colspan</td>
+                        <td><pre><code>.SimpleTable('colspan','all');</code><code>.SimpleTable('colspan',0);</code></pre></td>
+                        <td>合并内容相同的单元格为跨行单元格：'all'/列号(起始为0)</td>
+                    </tr>
+                    <tr>
+                        <td>rowactive</td>
+                        <td><pre><code>.SimpleTable('rowactive','all');</code><code>.SimpleTable('rowactive',0);</code></pre></td>
+                        <td>
+                        将全部行/制定行置为禁用状态：'all'/行号(起始为0)<br />
+                        <span class="text-red">注意，对标题行不能生效。</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>rowdisable</td>
+                        <td><pre><code>.SimpleTable('rowdisable','all');</code><code>.SimpleTable('rowdisable',0);</code></pre></td>
+                        <td>将全部行/制定行置为禁用状态：'all'/行号(起始为0)</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr><th>方法</th><th>示例</th><th>描述</th></tr>
+                </tfoot>
+            </table>
+        </div>
+        <br />
+        <p>合并单元格示例：</p>
+        <button type="button" class="btn btn-primary" name="ToggleNext">显示/隐藏</button>
+        <div class="table-responsive">
+            <table id="SimpleTable9">
+            <thead>
+            <tr><th>H1.1</th><th>H2</th><th>H1.3</th><th>H1.3</th></tr>
+            <tr><th>H2.1</th><th>H2</th><th>H2.3</th><th>H2.4</th></tr>
+            </thead>
+            <tbody>
+            <tr><td>TD1.1</td><td>TD1.1</td><td>TD1.1</td><td>TD1.4</td></tr>
+            <tr><td>TD2.1</td><td>TD2.2</td><td>TD2.3</td><td>TD2.4</td></tr>
+            <tr><td>TD3.1</td><td>TD2.2</td><td>TD2.3</td><td>TD3.4</td></tr>
+            <tr><td>TD4.1</td><td>TD2.2</td><td>TD4.3</td><td>TD4.3</td></tr>
+            <tr><td>TD5.1</td><td>TD5.2</td><td>TD4.3</td><td>TD4.3</td></tr>
+            <tr><td>TD6.1</td><td>TD6.2</td><td>TD4.3</td><td>TD4.3</td></tr>
+            </tbody>
+            <tfoot>
+            <tr><th>H2.1</th><th>H2</th><th>H2.3</th><th>H2.4</th></tr>
+            <tr><th>H1.1</th><th>H2</th><th>H1.3</th><th>H1.3</th></tr>
+            </tfoot>
+            </table>
+            <pre>Code: <br /><code>$('#SimpleTable3').SimpleTable('rowspan','all');<br />$('#SimpleTable3').SimpleTable('colspan','all');</code></pre>
+            <p>
+                特别需要注意以下内容：<br />
+                1. 由于“被合并”的单元格<span class="text-red">并非实际删除</span>，而仅仅只是<span class="text-red">隐藏</span>了（加上了display:none;），因此每一行的数据依然还是存在的，在进行单元格操作的时候注意别忘了这个单元格。<br />
+                2. 一般情况下只会存在<span class="text-red">跨行或者跨列</span>的情况，不会存在<span class="text-red">既跨行又跨列</span>的情况，这个在Html中是没有办法通过简单方式实现的，如果存在跨越多行及多列的情况，切记一定要保证<span class="text-red">所有跨越的行和列都是同一个值</span>（如例子中的TD4.3），否则将产生不可预知的错位。<br />
+                3.  th 和 td 之间<span class="text-red">不能跨越</span>，所以请保证数据首行（或者尾行）与 标题行没有相同的单元格。
+            </p>
+        </div>
+        <br>
+        <h3>6. 更多示例：</h3>
+        <div class="row">
+            <div class="col4">
+                <table id="SimpleTable10" class="simpletable tab-primary nopadding">
+                    <thead>
+                        <tr><th>no padding</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>with border</td></tr>
+                        <tr><td>with hover</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col4">
+                <table class="simpletable tab-primary tinypadding">
+                    <thead>
+                        <tr><th>tiny padding</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>with border</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col4">
+                <table class="simpletable tab-primary tightpadding">
+                    <thead>
+                        <tr><th>tight padding</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>with border</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col4">
+                <table id="SimpleTable10" class="simpletable tab-success nopadding noborder">
+                    <thead>
+                        <tr><th>no padding</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>no border</td></tr>
+                        <tr><td>with hover</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col4">
+                <table class="simpletable tab-success tinypadding noborder">
+                    <thead>
+                        <tr><th>tiny padding</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>no border</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col4">
+                <table class="simpletable tab-success tightpadding noborder">
+                    <thead>
+                        <tr><th>tight padding</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>no border</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="dist/jquery.min.js"></script>
+    <script type="text/javascript" src="dist/simpletable.min.js"></script>
+    <script>
+    $(function(){
+        $('#SimpleTable1').SimpleTable();
+        $('#SimpleTable2').SimpleTable({color:'primary'});
+        $('#SimpleTable3').SimpleTable({color:'success'});
+        $('#SimpleTable4').SimpleTable({color:'info'});
+        $('#SimpleTable5').SimpleTable({color:'warning'});
+        $('#SimpleTable6').SimpleTable({color:'danger'});
+
+        // 以下全部为默认参数，使用与不使用效果相同
+        $('#SimpleTable7').SimpleTable({
+            hover: false,
+            padding: false,
+            border: true,
+            color: '',
+            algin: 'center'
+        });
+
+        $('#SimpleTable8').SimpleTable({
+            color:'warning',
+            align: 'left',
+        });
+        $('#SimpleTable8').SimpleTable('addHover');
+
+        $('#SimpleTable9').SimpleTable({
+           color:'danger',
+           padding: 'tiny',
+           hover: true,
+        });
+        $('#SimpleTable9').SimpleTable('rowspan','ALL');
+        $('#SimpleTable9').SimpleTable('colspan','ALL');
+
+        $('#SimpleTable10,#SimpleTable11').SimpleTable('addHover');
+
+        /*此处仅为该demo的辅助脚本，与 SimpleTable 无关紧要********start********/
+        $('.row').after('<div class="clr"></div>');
+
+        // bind
+        $('button[name="ToggleNext"]').click(function(event) {
+            var CodeObj = $(this).next();
+            if(CodeObj.is(':hidden')){
+                CodeObj.slideDown('slow');
+            }else{
+                CodeObj.slideUp('slow');
+            }
+        });
+        /*此处仅为该demo的辅助脚本，与 SimpleTable 无关紧要********end********/
+    });
+    
+    </script>
+
+</body>
+</html>
